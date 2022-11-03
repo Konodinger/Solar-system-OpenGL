@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\tpOpenGL.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\tpOpenGL.dir/objects.a @CMakeFiles\tpOpenGL.dir\objects1.rsp
+C:\MinGW\bin\c++.exe -g -Wl,--whole-archive CMakeFiles\tpOpenGL.dir/objects.a -Wl,--no-whole-archive -o tpOpenGL.exe -Wl,--out-implib,libtpOpenGL.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tpOpenGL.dir\linklibs.rsp

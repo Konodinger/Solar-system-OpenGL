@@ -1,0 +1,145 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_aa590/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_aa590.dir\build.make CMakeFiles/cmTC_aa590.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa590.dir/src.c.obj
+C:\MinGW\bin\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_aa590.dir\src.c.obj -c C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\src.c
+C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\src.c:1:21: fatal error: pthread.h: No such file or directory
+ #include <pthread.h>
+                     ^
+compilation terminated.
+CMakeFiles\cmTC_aa590.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_aa590.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_aa590.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_aa590/fast' failed
+mingw32-make.exe: *** [cmTC_aa590/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_24f52/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_24f52.dir\build.make CMakeFiles/cmTC_24f52.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24f52.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\cmTC_24f52.dir\CheckFunctionExists.c.obj -c "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_24f52.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_24f52.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_24f52.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_24f52.dir/objects.a @CMakeFiles\cmTC_24f52.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\cmTC_24f52.dir/objects.a -Wl,--no-whole-archive -o cmTC_24f52.exe -Wl,--out-implib,libcmTC_24f52.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_24f52.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_24f52.dir\build.make:99: recipe for target 'cmTC_24f52.exe' failed
+mingw32-make.exe[1]: *** [cmTC_24f52.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_24f52/fast' failed
+mingw32-make.exe: *** [cmTC_24f52/fast] Error 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_1c03a/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_1c03a.dir\build.make CMakeFiles/cmTC_1c03a.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c03a.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\cmTC_1c03a.dir\CheckFunctionExists.c.obj -c "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_1c03a.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1c03a.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_1c03a.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_1c03a.dir/objects.a @CMakeFiles\cmTC_1c03a.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\cmTC_1c03a.dir/objects.a -Wl,--no-whole-archive -o cmTC_1c03a.exe -Wl,--out-implib,libcmTC_1c03a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1c03a.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthread
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_1c03a.dir\build.make:99: recipe for target 'cmTC_1c03a.exe' failed
+mingw32-make.exe[1]: *** [cmTC_1c03a.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1c03a/fast' failed
+mingw32-make.exe: *** [cmTC_1c03a/fast] Error 2
+
+
+
+Determining if the include file dinput.h exists failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_b3cab/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b3cab.dir\build.make CMakeFiles/cmTC_b3cab.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b3cab.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_b3cab.dir\CheckIncludeFile.c.obj -c C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:20: fatal error: dinput.h: No such file or directory
+ #include <dinput.h>
+                    ^
+compilation terminated.
+CMakeFiles\cmTC_b3cab.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_b3cab.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b3cab.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b3cab/fast' failed
+mingw32-make.exe: *** [cmTC_b3cab/fast] Error 2
+
+
+
+Determining if the include file xinput.h exists failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_4d90f/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_4d90f.dir\build.make CMakeFiles/cmTC_4d90f.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_4d90f.dir\CheckIncludeFile.c.obj -c C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:20: fatal error: xinput.h: No such file or directory
+ #include <xinput.h>
+                    ^
+compilation terminated.
+CMakeFiles\cmTC_4d90f.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_4d90f.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4d90f/fast' failed
+mingw32-make.exe: *** [cmTC_4d90f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test _GLFW_HAS_64ASLR failed with the following output:
+Change Dir: C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_614b1/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_614b1.dir\build.make CMakeFiles/cmTC_614b1.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_614b1.dir/src.c.obj
+C:\MinGW\bin\gcc.exe -D_GLFW_HAS_64ASLR  -Wl,--high-entropy-va -o CMakeFiles\cmTC_614b1.dir\src.c.obj -c C:\Users\berge\Documents\Cours\igr\TP00-OpenGL\src\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_614b1.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_614b1.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_614b1.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_614b1.dir/objects.a @CMakeFiles\cmTC_614b1.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -Wl,--high-entropy-va -Wl,--whole-archive CMakeFiles\cmTC_614b1.dir/objects.a -Wl,--no-whole-archive -o cmTC_614b1.exe -Wl,--out-implib,libcmTC_614b1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_614b1.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: unrecognized option '--high-entropy-va'
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_614b1.dir\build.make:99: recipe for target 'cmTC_614b1.exe' failed
+mingw32-make.exe[1]: *** [cmTC_614b1.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/berge/Documents/Cours/igr/TP00-OpenGL/src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_614b1/fast' failed
+mingw32-make.exe: *** [cmTC_614b1/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
